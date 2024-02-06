@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajasco Fashion House</title>
+    <link rel="stylesheet" href="Main.css">
+    <script src="https://kit.fontawesome.com/0f68490be8.js" crossorigin="anonymous"></script>   
+</head>
+<body>
+    <nav id="navBar" class="navbar-white">
+        <a href="/Index.html">
+            <img src="Images/20230526_085748__1__page-0001-removebg-preview.png" class="logo">
+        </a>
+            
+        
+        <ul class="nav-links">
+            <li><a href="/House.html" class="active">Popular stores</a></li>
+            <li><a href="Outside.html">Products</a></li>
+            <li><a href="Listing.html">Other packages</a></li>
+        </ul>
+        <a href="/Register.html">
+           <a href="/Register.html" class="register-btn">Register Now</a>
+        </a>
+        
+        <i class="fa-solid fa-bars" onclick="togglebtn()"></i>
+    </nav>
+    <div class="house-details">
+        <div class="house-title">
+            <h1>Ajasco Fashion House</h1>
+            <div class="row">
+                <div>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star-half-stroke"></i>
+                    <i class="fa-regular fa-star-half-stroke"></i>
+                    <span>245 Reviews</span>
+                </div>
+                <div>
+                    <p>Location: Oyo State,Ibadan,Nigeria</p>
+                </div>
+            </div>
+        </div>
+
+ <!----------- account-page----------->
+
+ <div class="account-page">
+    <div class="container">
+        <div class="row">
+            <div class="col-2">
+                <img src="Images/green2.jpg" width="100%">
+            </div>
+
+            <div class="col-2">
+                <div class="form-container">
+                    <div class="form-btn">
+                        <span onclick="login()">Login</span>
+                        <span onclick="register()">Register</span>
+                        <hr id="Indicator">
+                    </div>
+
+                    <form id="LoginForm">
+                        <input type="text" placeholder="Username">
+                        <input type="password" placeholder="Password">
+                        <button type="submit" class="btn">Login</button>
+                        <a href="">Forgot password</a>
+                    </form>
+
+                    <form id="RegForm">
+                        <input type="text" placeholder="Username">
+                        <input type="email" placeholder="Email">
+                        <input type="tel" placeholder="Phone Number">
+                        <input type="password" placeholder="Password">
+                        <button type="submit" class="btn">Register</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+ </div>
+
+
+
+     
+ <!---------- footer-------->
+ <div class="footer">
+    <a href="https://facebook.com/"><i class="fa-brands fa-facebook-f"></i></i></a>
+    <a href="https://youtube.com/"><i class="fa-brands fa-youtube"></i></i></a>
+    <a href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></i></a>
+    <a href="https://linkdin.com/"><i class="fa-brands fa-linkedin-in"></i></i></a>
+    <a href="https://instagram.com/"><i class="fa-brands fa-instagram"></i></i></a>
+    <hr>
+    <p>Ajasco Fashion House</p>
+    
+</div>
+<!----------js for toggle menu--------->
+     <script>
+        var MenuItems = document.getElementById("MenuItems");
+
+        MenuItems.style.maxHeight = "0px";
+
+        function menutoggle(){
+            if(MenuItems.style.maxHeight == "0px")
+            {
+                MenuItems.style.maxHeight = "200px"
+            }
+        else
+            {
+                MenuItems.style.maxHeight = "0px"
+            }
+        }
+     </script>
+<!----------js for toggle Form--------->
+
+     <script>
+
+        var LoginForm = document.getElementById("LoginForm");
+        var RegForm = document.getElementById("RegForm");
+        var Indicator = document.getElementById("Indicator");
+
+            function register(){
+
+                RegForm.style.transform = "translateX(0px)";
+                LoginForm.style.transform = "translateX(0px)";
+                Indicator.style.transform = "translateX(100px)";
+            }
+            function login(){
+
+                RegForm.style.transform = "translateX(300px)";
+                LoginForm.style.transform = "translateX(300px)";
+                Indicator.style.transform = "translateX(0px)";
+            }
+
+     </script>
+</body>
+</html>
